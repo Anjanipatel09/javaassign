@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <body>
+    <h1>ATM MENU</h1>
+    <input type="number" id="atmMenu" min="1" max="5" placeholder="Enter the number">
+    <button onclick="showOption()">Submit</button>
+    <p id="result"></p>
+
+    <script>
+        function showOption() {
+            let option = parseInt(document.getElementById("atmMenu").value);
+            let result = document.getElementById("result");
+
+            switch (option) {
+                case 1:
+                    result.textContent = "Check Balance";
+                    console.log("Check Balance");
+                    break;
+                case 2:
+                    result.textContent = "Withdraw Cash";
+                    console.log("Withdraw Cash");
+                    break;
+                case 3:
+                    result.textContent = "Deposit Funds";
+                    console.log("Deposit Funds");
+                    break;
+                case 4:
+                    result.textContent = "Exit";
+                    console.log("Exit");
+                    break;
+                default:
+                    result.textContent = "Invalid Option";
+                    console.log("Invalid Option");
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</body>
+
+</html>

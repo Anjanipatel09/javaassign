@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <h1>Call RECHARGE</h1>
+        <input type="number" id="atmMenu" min="1" max="5" placeholder="Enter the number">
+        <button onclick="showOption()">Submit</button>
+        <p id="result"></p>
+        <script>
+            function showOption() {
+                let option = parseInt(document.getElementById("atmMenu").value);
+                let result = document.getElementById("result");
+
+                switch (option) {
+                    case 1:
+                        result.textContent = "For service...";
+                        console.log("For service...");
+                        break;
+                    case 2:
+                        result.textContent = "Recharge your phone data...";
+                        console.log("Recharge your phone data...");
+                        break;
+                    case 3:
+                        result.textContent = "Check our updated...";
+                        console.log("Check our updated...");
+                        break;
+                    default:
+                        result.textContent = "Invalid choice";
+                        console.log("Invalid choice");
+                        break;
+
+                }
+            }
+        </script>
+    </body>
+
+</html>
