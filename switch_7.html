@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch_7</title>
+</head>
+<body>
+    <script>
+        let unlockMethod = (prompt("fingerprint"));
+
+switch (unlockMethod) {
+  case "pin":
+    document.writeln("Unlocking with PIN");
+    break;
+  case "pattern":
+    document.writeln("Unlocking with Pattern");
+    break;
+  case "fingerprint":
+    document.writeln("Unlocking with Fingerprint");
+    break;
+  default:
+    document.writeln("Unknown method");
+}
+
+
+
+    </script>
+</body>
+</html>

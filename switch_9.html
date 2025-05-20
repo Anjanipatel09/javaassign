@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch_9</title>
+</head>
+<body>
+    <script>
+        let orderStatus = (prompt("shipped"));
+
+switch (orderStatus) {
+  case "pending":
+    document.writeln("Your order is pending.");
+    break;
+  case "shipped":
+    document.writeln("Your order is on the way!");
+    break;
+  case "delivered":
+    document.writeln("Order delivered.");
+    break;
+  case "cancelled":
+    document.writeln("Order was cancelled.");
+    break;
+  default:
+    document.writeln("Unknown status.");
+}
+
+
+    </script>
+</body>
+</html

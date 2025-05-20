@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swtich_10</title>
+</head>
+<body>
+    <script>
+        let hour = (prompt("enter hour"));
+let period;
+
+switch (true) {
+  case (hour >= 0 && hour < 12):
+    period = "AM";
+    break;
+  case (hour >= 12 && hour < 24):
+    period = "PM";
+    break;
+  default:
+    period = "Invalid hour";
+}
+
+document.writeln("It's " + hour + " " + period);
+
+
+    </script>
+</body>
+</html>
