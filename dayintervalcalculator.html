@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Interval calculator</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            /* text-align: center; */
+            margin-top: 50px;
+        }
+
+        input {
+            font-size: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .box {
+            border: 2px solid black;
+            background-color: cadetblue;
+            color: black;
+            font-size: 20px;
+            margin-top: 5px;
+
+        }
+
+        button {
+
+            background-color: rgb(89, 74, 188);
+            color: aliceblue;
+            border: 1px;
+
+        }
+
+        h2 {
+            align-items: center;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <h2>Day Interval calculator</h2>
+    <label for="Start Date:">Start Date:</label>
+    <input type="date" id="Start Date:">
+    <label for="End Date:">End Date:</label>
+    <input type="date" id="End Date:"><br>
+
+    <button onclick="Intervalcalculator()">calculate Interval</button>
+    <div class="box">
+        <ul>
+            <h2><strong>Result:</strong></h2>
+            <li> Days:<span id="result"> </span></li>
+            <li> Months:<span id="months"> </span></li>
+            <li> Years:<span id="years"> </span></li>
+            <li> Weeks:<span id="weeks"> </span></li>
+        </ul>
+    </div>
+    <script>
+        function Intervalcalculator() {
+            let startdate = new Date(document.getElementById("Start Date:").value);
+            let enddate = new Date(document.getElementById("End Date:").value);
+            let time = enddate - startdate;
+
+            let Days = Math.ceil(time / (1000 * 60 * 60 * 24));
+            let Months = Math.ceil(Days / 31);
+            let Years = Math.ceil(Months / 12);
+            let Weeks = Math.ceil(Years / 7)
+            console.log(Months);
+
+
+            document.getElementById("result").innerText = `${Days}`
+            document.getElementById("months").innerText = `${Months}`
+            document.getElementById("years").innerText = `${Years}`
+            document.getElementById("weeks").innerText = `${Weeks}`
+
+
+        }   
+    </script>
+</body>
+
+</html>
